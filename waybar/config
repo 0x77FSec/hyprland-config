@@ -1,0 +1,153 @@
+{
+  "layer": "top",
+
+  // Left side modules
+  "modules-left": ["custom/appmenu","custom:separator","cpu","custom:separator","custom/network"],
+
+  // Center (optional)
+  "modules-center": ["custom/wifi","custom:separator","hyprland/workspaces","custom:separator","bluetooth"],
+
+  // Right side modules
+  "modules-right": ["battery","custom:separator", "clock","custom:separator","custom:separator","custom/power"],
+
+  // App launcher (custom menu)
+  "custom/appmenu": {
+    "format": "󰻀",
+    "tooltip": "App Menu",
+    "on-click": "~/.config/waybar/runrofi.sh",
+    "interval": 999999
+  },
+
+// custom power 
+  "custom/power": {
+    "format": " ",
+    "tooltip": false,
+    // "tooltip-format": "Power Menu",
+    "on-click": "~/.config/waybar/scripts/power-menu.sh"
+  },
+
+
+// network-speed
+
+
+"custom/network": {
+  "exec": "~/.config/waybar/scripts/network.sh",
+  "interval": 1,
+  "return-type": "json"
+},
+
+
+
+// Battery
+
+
+    "battery": {
+    "states": {
+      "warning": 20,
+      "critical": 10
+    },
+
+    "format": "{icon} {capacity}%",
+    "format-icons": ["󰂎", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+    "format-charging": " {capacity}%",
+
+    "tooltip-format": "Discharging: {time}",
+    "tooltip-format-charging": "Charging: {time}",
+    "interval": 1,
+    "min-length": 6,
+    "max-length": 6
+  },
+
+
+ // clock
+
+
+    "clock": {
+  "format": "{:%I:%M %p}",
+  "format-alt": " {:%d·%m·%y}",  // using Unicode calendar icon
+  "tooltip-format": "{:%A, %d %B %Y %H:%M}"
+},
+ 
+
+// workspaces
+
+
+   "hyprland/workspaces": {
+  "format-icons": {
+  "default": "󰍹"    // Grid, very Apple/tiling-friendly
+},
+  },
+
+
+
+
+  "persistent-workspaces": {
+    "Virtual-1": [1, 2, 3, 4, 5]
+  },
+
+
+
+
+  "custom:separator": {
+  "format": " | ",
+  "tooltip": false
+},
+
+
+
+
+  "custom/wifi": {
+    "exec": "~/.config/waybar/scripts/wifi-status.sh",
+    "return-type": "json",
+    "format": "{}",
+    "on-click": "~/.config/waybar/scripts/wifi-menu.sh",
+    "on-click-right": "kitty --title '󰤨  Network Manager TUI' bash -c nmtui",
+    "interval": 1,
+    "min-length": 1,
+    "max-length": 1
+  },
+
+
+
+
+  "bluetooth": {
+    "format": "󰂰",
+    "format-disabled": "󰂲",
+    "format-connected": "󰂱",
+    "format-connected-battery": "󰂱",
+
+    "tooltip-format": 
+      "{num_connections} connected",
+    "tooltip-format-disabled": 
+      "Bluetooth Disabled",
+    "tooltip-format-connected": 
+      "{device_enumerate}",
+    "tooltip-format-enumerate-connected": 
+      "{device_alias}",
+    "tooltip-format-enumerate-connected-battery": 
+      ":: {device_alias}: 󱊣 {device_battery_percentage}%",
+
+    "on-click": "~/.config/waybar/scripts/bluetooth-menu.sh",
+    "on-click-right": "kitty --title '󰂯  Bluetooth TUI' bash -c bluetui",
+    "interval": 1,
+    "min-length": 1,
+    "max-length": 1
+  },
+
+   "cpu": {
+    "format": "󰍛 {usage}%",
+    "tooltip": false,
+    "interval": 5,
+    "min-length": 6,
+    "max-length": 6
+  },
+}
+
+
+
+
+
+
+
+
+

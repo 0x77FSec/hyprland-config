@@ -1,0 +1,73 @@
+/* Power menu */
+
+@theme "~/.config/rofi/theme.rasi"
+
+configuration {
+  font:                     "JetBrainsMono Nerd Font 8";
+  hover-select:             true;
+  me-select-entry:          "MousePrimary";
+  me-accept-entry:          "!MousePrimary";
+}
+
+/* Window */
+
+window {
+  location:                 center;
+  anchor:                   center;
+  width:                    700px;
+  height:                   500px;
+  border:                   3px;
+  border-radius:            10px;
+  border-color:              #11111b;
+  background-color:          #9399b2;
+  children:                 [ mainbox ];
+}
+
+mainbox {
+  spacing:                  0;
+  background-color:         #9399b2;
+  text-color:                #cdd6f4;
+  children:                 [ textbox-custom, listview ];
+}
+
+textbox-custom {
+  font:                     "JetBrainsMono Nerd Font Bold 2";
+  horizontal-align:         0.5;
+  padding:                  8;
+  expand:                   false;
+  background-color:         #9399b2;
+  text-color:               #11111b;
+  expand:                   false;
+  // content:                  "  Power";
+}
+
+/* List */
+
+listview {
+  border:                   2px 0 0 0;
+  border-radius:            8px;
+  border-color:             #9399b2;
+  lines:                    6;
+  spacing:                  8px;
+  padding:                  12px;
+  background-color:         #11111b;
+}
+
+element {
+  padding:                  20px;
+  cursor:                   pointer;
+  background-color:         inherit;
+  text-color:                 #cdd6f4;
+}
+element selected.normal {
+  border-radius:            40px;
+  background-color:         #9399b2;
+  text-color:                #11111b;
+}
+element-text {
+  font: "JetBrainsMono Nerd Font Bold 12"; 
+  padding:                  6px 12px;
+  cursor:                   inherit;
+  background-color:         inherit;
+  text-color:               inherit;
+}

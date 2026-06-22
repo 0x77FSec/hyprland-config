@@ -1,0 +1,51 @@
+configuration {
+  show-icons: true;
+  drun-display-format: "{icon} {name}";
+  icon-theme: "Papirus";
+  font: "JetBrainsMono Nerd Font 12";
+  display-drun: "Applications";
+}
+
+window {
+  location: center;
+  anchor: center;
+  fullscreen: false;
+  width: 600px;
+  border: 2px;
+  border-radius: 12px;
+  background-color: #1e1e2e;
+}
+
+mainbox {
+  padding: 10px;
+  background-color: #1e1e2e;
+}
+
+listview {
+  columns: 5;
+  lines: 6;
+  spacing: 15px;
+  fixed-height: true;
+  background-color: transparent;
+}
+
+element {
+  padding: 10px;
+  background-color: transparent;
+  text-color: #cdd6f4;
+}
+
+element-icon {
+  size: 48px;
+}
+
+element selected.normal {
+  background-color: #89b4fa;
+  text-color: #1e1e2e;
+  border-radius: 10px;
+}
+
+element-text {
+  text-color: inherit;
+  background-color: transparent;
+}

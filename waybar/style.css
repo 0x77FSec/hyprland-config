@@ -1,0 +1,67 @@
+* {
+  border: none;
+  border-radius: 10px;
+  font-family: "monospace";
+  font-size: 16px;
+  min-height: 0;
+  color: #ffffff;
+  padding: 0.4px;
+  margin: 0.4px;
+}
+
+#custom-appmenu{
+
+  margin-left: 10px;
+
+}
+
+window#waybar {
+  background-color: rgba(30, 30, 30, 0.0); /* Dark transparent */
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.0);
+  padding: 2px 10px;
+}
+#workspaces {
+
+border-radius: 10px;
+/* background-color: #aaa; */
+
+}
+
+#workspaces button {
+  padding: 0 8px;
+  margin: 0 2px;
+  background: transparent;
+  color: #aaa;
+}
+
+#workspaces button.active {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+/* General spacing between modules */
+#workspaces,
+#clock,
+#battery,
+#custom-wifi,
+#cpu,
+#bluetooth,
+#custom-power ,
+#custom-appmenu {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#custom-power {
+  color: #ff5555;
+  padding: 0 10px;
+  font-size: 18px;
+}
+
+#custom-network {
+
+ color: #ff5555;
+  padding: 0 10px;
+  
+
+}

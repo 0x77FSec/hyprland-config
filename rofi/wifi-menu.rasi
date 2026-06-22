@@ -1,0 +1,96 @@
+
+configuration {
+  font:                     "JetBrainsMono Nerd Font 8";
+  hover-select:             true;
+  me-select-entry:          "MousePrimary";
+  me-accept-entry:          "!MousePrimary";
+}
+
+/* Window */
+
+window {
+  location:                 center;
+  anchor:                   center;
+  width:                    700px;
+  height:                   300px;
+  border:                   3px;
+  border-radius:            10px;
+  border-color:           #9399b2;
+  background-color:          #11111b;
+  children:                 [ mainbox ];
+}
+
+mainbox {
+  spacing:                  0;
+  background-color:        #9399b2;
+  text-color:                #cdd6f4;
+  children:                 [ textbox-custom, listview, inputbar ];
+}
+
+textbox-custom {
+  font:                     "JetBrainsMono Nerd Font Bold 8";
+  horizontal-align:         0.5;
+  padding:                  1px 0;
+  expand:                   false;
+  background-color:       #9399b2;
+  text-color:               #11111b;
+  expand:                   false;
+  content:                  "󰤥  Wi-Fi";
+}
+
+/* Input */
+
+inputbar {
+  margin:                   -32px 6px 6px;
+  border-radius:            6px;
+  spacing:                  inherit;
+  background-color:         #181825;
+  text-color:               inherit;
+  children:                 [ prompt, entry ];
+}
+prompt {
+  padding:                  6px 6px 6px 12px;
+  background-color:         inherit;
+  text-color:               inherit;
+}
+entry {
+  placeholder:              "Search";
+  padding:                  6px 0;
+  cursor:                   text;
+  background-color:         inherit;
+  text-color:               inherit;
+}
+
+/* List */
+
+listview {
+  border:                   2px 0 0 0;
+  border-radius:            8px;
+  border-color:            #9399b2;
+  lines:                    6;
+  fixed-height:             false;
+  dynamic:                  false;
+  cycle:                    false;
+  margin:                   0 0 -2px;
+  padding:                  6px 6px 40px;
+  background-color:         #11111b;
+}
+element {
+  padding:                  6px;
+  cursor:                   pointer;
+  background-color:         inherit;
+  text-color:              #cdd6f4;
+}
+element selected active,
+element selected normal {
+  border-radius:            6px;
+  background-color:       #9399b2;
+  text-color:              #11111b;
+}
+element-text {
+  font:                     "JetBrainsMono Nerd Font Bold 12";
+  padding:                  0 6px;
+  cursor:                   inherit;
+  background-color:         inherit;
+  text-color:               inherit;
+}
