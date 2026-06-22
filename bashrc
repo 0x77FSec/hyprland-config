@@ -14,5 +14,6 @@ PS1='\[\e[36m\][\u@\h \W]\$\[\e[0m\] '
 export PATH=$PATH:$HOME/.local/bin
 
 # starship
+
  export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
  eval "$(starship init bash)"
