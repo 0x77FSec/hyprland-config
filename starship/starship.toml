@@ -1,0 +1,42 @@
+add_newline = false
+
+format = """
+$hostname$username $directory $git_branch$git_status
+$character
+"""
+
+
+# USERNAME (cyan)
+[username]
+show_always = true
+style_user = "bold #00ffff"
+style_root = "bold red"
+format = "[$user]($style)"
+
+# HOSTNAME (cyan)
+[hostname]
+ssh_only = false
+style = "bold #00ffff"
+format = "[$hostname]($style)[@](bold #ffffff)"
+
+
+# DIRECTORY
+[directory]
+style = "bold white"
+format = " [$path]($style) "
+
+# GIT
+[git_branch]
+symbol = " "
+style = "bold #00ff99"
+format = "[$symbol$branch]($style) "
+
+[git_status]
+style = "bold #00ff99"
+format = "[$all_status$ahead_behind]($style) "
+
+# PROMPT SYMBOL
+[character]
+success_symbol = "[❯](bold #00ff99)"
+error_symbol = "[❯](bold red)"
+
