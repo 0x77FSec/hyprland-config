@@ -1,7 +1,7 @@
 * {
   border: none;
   border-radius: 10px;
-  font-family: "monospace";
+  font-family: "JetBrainsMono Nerd Font";
   font-size: 16px;
   min-height: 0;
   color: #ffffff;
@@ -10,7 +10,7 @@
 }
 
 #custom-appmenu{
-
+  font-size: 18px;
   margin-left: 10px;
 
 }
@@ -59,9 +59,24 @@ border-radius: 10px;
 }
 
 #custom-network {
-
- color: #ff5555;
-  padding: 0 10px;
+  color: #ff5555;
   
 
 }
+/* 
+#custom-wifi{
+
+margin-right: 10px; 
+}
+
+#bluetooth{
+
+margin-left: 10px ;  
+font-size: 24px;
+
+}
+
+#cpu{
+margin-left: 10px;
+
+} */
