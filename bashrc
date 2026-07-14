@@ -17,3 +17,5 @@ export PATH=$PATH:$HOME/.local/bin
 
  export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
  eval "$(starship init bash)"
+
+alias b='brightnessctl set'
