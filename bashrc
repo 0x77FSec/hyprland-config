@@ -19,3 +19,8 @@ export PATH=$PATH:$HOME/.local/bin
  eval "$(starship init bash)"
 
 alias b='brightnessctl set'
+
+
+alias sshup='systemctl enable --now sshd'
+alias sshdown='systemctl disable --now sshd'
+alias sshstatus='systemctl status sshd'
