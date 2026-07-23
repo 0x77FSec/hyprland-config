@@ -2,13 +2,13 @@
   "layer": "top",
 
   // Left side modules
-  "modules-left": ["custom/appmenu","custom:separator","cpu","custom:separator","custom/network"],
+  "modules-left": ["custom/appmenu","cpu","custom/network"],
 
   // Center (optional)
   "modules-center": ["custom/wifi","custom:separator","hyprland/workspaces","custom:separator","bluetooth"],
 
   // Right side modules
-  "modules-right": ["battery","custom:separator", "clock","custom:separator","custom:separator","custom/power"],
+  "modules-right": ["custom/notification","battery", "clock","custom/power"],
 
   // App launcher (custom menu)
   "custom/appmenu": {
@@ -94,7 +94,7 @@
 },
 
 
-
+// custom wifi
 
   "custom/wifi": {
     "exec": "~/.config/waybar/scripts/wifi-status.sh",
@@ -108,6 +108,7 @@
   },
 
 
+//custom bluetooth
 
 
   "bluetooth": {
@@ -141,6 +142,30 @@
     "min-length": 6,
     "max-length": 6
   },
+
+//custom notification
+
+"custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+        "notification": "",
+        "none": "",
+        "dnd-notification": "",
+        "dnd-none": "",
+        "inhibited-notification": "",
+        "inhibited-none": "",
+        "dnd-inhibited-notification": "",
+        "dnd-inhibited-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "sleep 0.1; swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+}
+
 }
 
 

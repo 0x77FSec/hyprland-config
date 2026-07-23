@@ -80,3 +80,10 @@ font-size: 24px;
 margin-left: 10px;
 
 } */
+
+#custom-notification {
+    font-size: 16px;
+    padding: 0 8px;
+    color: #89b4fa;
+}
+
