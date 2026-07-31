@@ -24,3 +24,5 @@ alias b='brightnessctl set'
 alias sshup='systemctl enable --now sshd'
 alias sshdown='systemctl disable --now sshd'
 alias sshstatus='systemctl status sshd'
+
+alias rm="rm -i"
