@@ -25,7 +25,7 @@ hl.window_rule({match = {class = "^(burp-StartBurp)$",title = "^HTTP history fil
 hl.window_rule({match = {class = "^(burp-StartBurp)$",title = "^Load Burp extension$",},float = true,center = true,size = { "1000", "650" },})
 hl.window_rule({match = {class = "^(burp-StartBurp)$",title = "^Settings$",},float = true,center = true,size = { "1400", "850" },})
 hl.window_rule({match = {class = "^(burp-StartBurp)$",title = ".*Intruder attack.*",},float = true,center = true,size = { "1400", "850" },})
-
+hl.window_rule({match = {class = "^(burp-StartBurp)$",title = "^Select font$",},float = true,center = true,size = { "1400", "850" },})
 
 -- ################################
 -- #### xdg-desktop-portal-gtk ####
