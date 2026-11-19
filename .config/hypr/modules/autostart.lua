@@ -24,6 +24,10 @@ hl.on("hyprland.start", function()
   
   -- Wallpaper Daemon
     hl.exec_cmd("sleep 0.2 && ~/.config/hypr/awww.sh")
+ 
+  -- Quickshell
+    hl.exec_cmd("qs -c user")	
+
 
 end)
 
