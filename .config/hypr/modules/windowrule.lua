@@ -16,6 +16,24 @@
 --     rounding    = 0,
 -- })
 
+-- Workspace 1: Scrolling layout
+hl.workspace_rule({
+    workspace = "1",
+    layout = "scrolling",
+    layout_opts = { direction = "left",
+    },
+})
+
+-- Workspaces 2-10: Dwindle layout
+for i = 2, 10 do
+    hl.workspace_rule({
+        workspace = tostring(i),
+        layout = "dwindle",
+    })
+end
+
+
+
 -- ################################
 -- ######### Burp Suite ###########
 -- ################################
@@ -32,3 +50,10 @@ hl.window_rule({match = {class = "^(burp-StartBurp)$",title = "^Select font$",},
 -- ################################
 
 hl.window_rule({match = {class = "^(xdg-desktop-portal-gtk)$",title = "^Open File$",},float = true,center = true,size = { "1400", "850" },})
+
+-- ################################
+-- #### Obsidian ##################
+-- ################################
+
+hl.window_rule({ match = { class = "^(md.obsidian.Obsidian)$", title = "^Settings - .*", }, float = true, center = true, size = { "1400", "850" }, })
+hl.window_rule({ match = { class = "^(md.obsidian.Obsidian)$", title = "^(Settings|Community plugins|Community themes|Release Notes).*", }, float = true, center = true, size = { "1000", "650" }, })

@@ -5,8 +5,8 @@
 -- # Or execute your favorite apps at launch like this:
 
 hl.on("hyprland.start", function()
-  
-  -- Idle Manager
+
+ -- Idle Manager(remove this if this is already running)
     hl.exec_cmd("hypridle")
 
   -- Notification daemon
