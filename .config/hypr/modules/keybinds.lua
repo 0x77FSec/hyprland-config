@@ -15,7 +15,7 @@ hl.bind("SUPER + C", hl.dsp.window.close())
 hl.bind("SUPER + E", hl.dsp.exec_cmd(fileManager))
 hl.bind("SUPER + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind("SUPER + A", hl.dsp.layout("togglesplit"))
-hl.bind("SUPER + R", hl.dsp.exec_cmd("rofi -show drun"))
+hl.bind("SUPER + R", hl.dsp.exec_cmd("qs -p ~/.config/quickshell/diablo/launcher"))
 hl.bind("SUPER + L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind("SUPER + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch exit"))
 

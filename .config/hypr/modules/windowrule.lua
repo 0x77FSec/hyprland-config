@@ -57,3 +57,15 @@ hl.window_rule({match = {class = "^(xdg-desktop-portal-gtk)$",title = "^Open Fil
 
 hl.window_rule({ match = { class = "^(md.obsidian.Obsidian)$", title = "^Settings - .*", }, float = true, center = true, size = { "1400", "850" }, })
 hl.window_rule({ match = { class = "^(md.obsidian.Obsidian)$", title = "^(Settings|Community plugins|Community themes|Release Notes).*", }, float = true, center = true, size = { "1000", "650" }, })
+
+
+hl.window_rule({
+    name = "quickshell-launcher",
+    match = {
+        class = "org.quickshell",
+        initial_title = "User Launcher",
+    },
+    float = true,
+    size = { 864, 486 },
+    center = true,
+})
